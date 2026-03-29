@@ -1,0 +1,6 @@
+google-genai
+moviepy
+pandas
+seaborn
+matplotlib
+python-dotenv
