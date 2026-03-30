@@ -1,4 +1,5 @@
 PROJECT DOCUMENTATION: AI-POWERED MULTIMODAL CONTENT ANALYST
+Project main part is written on project.ipynb notebook and Data Visualization in data_visualization.ipynb.
 1. Project Overview
 This project solves the problem of "Content Repurposing." It uses a Multimodal Large Language Model (LLM) to identify high-retention segments from long-form video. Instead of manual editing, the system uses AI to find "Hooks" and "Insights," automatically cutting them into social-media-ready clips.
 
@@ -8,20 +9,14 @@ Phase I: Audio Extraction: The system uses MoviePy to isolate the audio stream f
 Phase II: AI Inference (Google Gemini API)
 The audio file is uploaded to Google's cloud servers.
 
-The "Brain": We use the Gemini 2.0 Flash model. Unlike standard text AI, this model is "Multimodal," meaning it "listens" to the audio directly to understand tone, excitement, and pauses, rather than just reading a transcript.
-
 Prompt Engineering: The AI is instructed to act as a Social Media Editor. it scans for practical protocols, strong opinions, and thematic shifts.
 
 Phase III: Data Transformation (JSON to CSV)
 The AI returns a JSON (JavaScript Object Notation) array.
 The Python script parses this raw data into a Pandas DataFrame.
 
-
 Phase IV: Exploratory Data Analysis (EDA)
 Using Seaborn and Matplotlib, the system generates visual proof of the AI's logic.
-Virality Mapping: A timeline graph showing which parts of the podcast have the highest "energy" scores.
-
-Thematic Distribution: A statistical breakdown of topics discussed 
 
 Phase V: Automated Production 
 The system filters the top 5 candidates.
@@ -37,5 +32,3 @@ Key Validation: The script uses .get() methods to prevent crashes if the AI fail
 Face Detection: Adding logic to automatically crop horizontal video into 9:16 vertical (Portrait) mode.
 
 Subtitle Overlay: Using the AI's transcript to burn captions directly onto the video.
-
-Sentiment Analysis: Adding a "Mood" filter to select only "Motivational" or "Educational" clips.
